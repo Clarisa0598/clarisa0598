@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src-->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html  -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+
+        </div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding" >Ejercicios de Preguntas y Respuestas</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link -->
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="content-block">
+                            <!--<p>Page content goes here</p>-->
+                            <ul class="collection with-header">
+                                <li class="center-align"><h4>Ejercicios de Matematicas </h4></li>
+
+                                <li class="collection-item" >Para Primaria(6to)</li>
+                            </ul>
+
+                            <BODY BGCOLOR="White">
+                            <FORM action="#" > 
+                            1.- ¿Cuál es el número posterior al -15?
+                            	<p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta1" value="A" onclick="respuesta1('A')"/>
+                            			<span>a) -14</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta1" value="B" onclick="respuesta1('B')"/>
+                            			<span>b)  14</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta1" value="C" onclick="respuesta1('C')"/>
+                            			<span>c)  10</span>
+                            		</label></p><br>
+
+
+                            2.- ¿Qué número es mayor?
+                            	<p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta2" value="A" onclick="respuesta2('A')"/>
+                            			<span>a) -01</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta2" value="B" onclick="respuesta2('B')"/>
+                            			<span>b)  -10</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta2" value="C" onclick="respuesta2('C')"/>
+                            			<span>c)  -05</span>
+                            		</label></p><br>
+
+
+                            3.- ¿Qué números están ordenados correctamente?
+
+                            	<p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta3" value="A" onclick="respuesta3('A')"/>
+                            			<span>a) -03 > -3</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                                    <label>
+                            			<input class="with-gap"  type="radio" name="pregunta3" value="B" onclick="respuesta3('B')"/>
+                            			<span>b) -10 > -05</span>
+                            		</label></p><br>
+                                
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta3" value="C" onclick="respuesta3('C')"/>
+                            			<span>c) -05 > -05</span>
+                            		</label></p><br>
+
+                            4.- ¿Qué número se sitúa más a la izquierda de la recta numérica?
+                            	<p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta4" value="A" onclick="respuesta4('A')"/>
+                            			<span>a) -20.000</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                                    <label>
+                            			<input class="with-gap"  type="radio" name="pregunta4" value="B" onclick="respuesta4('B')"/>
+                            			<span>b) -20</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta4" value="C" onclick="respuesta4('C')"/>
+                            			<span>c) -2.000</span>
+                            		</label></p><br>
+
+                            5.- ¿Qué número es menor?
+
+                            	<p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta5" value="A" onclick="respuesta5('A')"/>
+                            			<span>a) -78</span>
+                            		</label></p><br>
+                                
+                                <p class="left-align light"></p>
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta5" value="B" onclick="respuesta5('B')"/>
+                            			<span>b) -25</span>
+                            		</label></p><br>
+
+                                <p class="left-align light">
+                            		<label>
+                            			<input class="with-gap"  type="radio" name="pregunta5" value="C" onclick="respuesta5('C')"/>
+                            			<span>c) -56</span>
+                                    </label></p><br>
+                                        
+                                </FORM>
+
+
+
+
+                                    <SCRIPT language="JavaScript">
+
+                                        function examinar() 
+                                        { 
+                                        puntuacion=0; 
+                                        nocontesta=0; 
+                                        contestadas=0; 
+                                        puntosmaximos=0; 
+                                        
+                                        if(pregunta1!= "0" )
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta1 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta1 == "B") {puntuacion=puntuacion+10}
+                                          if(pregunta1 == "C") {puntuacion=puntuacion+0}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        if(pregunta2 != "0")
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta2 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta2 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta2 == "C") {puntuacion=puntuacion+10}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1}
+                                        
+                                        if(pregunta3!= "0" )
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta3 == "A") {puntuacion=puntuacion+10}
+                                          if(pregunta3 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta3 == "C") {puntuacion=puntuacion+0}
+                                        
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        if(pregunta4 != "0")
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta4 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta4 == "B") {puntuacion=puntuacion+10}
+                                          if(pregunta4 == "C") {puntuacion=puntuacion+0}
+                                        }
+                                        else {nocontesta=nocontesta+1}
+                                        
+                                        if(pregunta5!= "0" ){
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta5 == "A") {puntuacion=puntuacion+10}
+                                          if(pregunta5 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta5 == "C") {puntuacion=puntuacion+0}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        
+                                        if (puntosmaximos!=0) 
+                                        {indiceacierto=Math.round(100*(puntuacion/puntosmaximos))
+                                        } 
+                                        else{indiceacierto=0} 
+                                        
+                                        
+                                        if(indiceacierto<=100&&indiceacierto>=90) 
+                                        {
+                                        mensaje="Excelente Muy Bien Sigue Asi"} 
+                                        
+                                        if(indiceacierto<90&&indiceacierto>=80)
+                                        {
+                                        mensaje="Muy Bien"} 
+                                        
+                                        if(indiceacierto<70&&indiceacierto>=60)
+                                        {
+                                        mensaje="Regular Deverias Estudiar Mas"} 
+                                        
+                                        if(indiceacierto<50&&indiceacierto>=30)
+                                        {
+                                        mensaje="Mal Echale Ganas"} 
+                                        
+                                        if(indiceacierto<20&&indiceacierto>=0)
+                                        {
+                                        mensaje="REPROBADOOO!!!!"} 
+                                        
+                                        if(contestadas==0)
+                                        {
+                                        mensaje=":-|"} 
+                                        
+                                        alert("Tu puntuación es "+puntuacion+"." +  "\n\nEl número máximo de puntos que podía conseguir era de " + puntosmaximos + ".\n\nHa dejado sin contestar "+ nocontesta+".\n\nSu porcentaje de aciertos es de "+indiceacierto+"%.\n\n"+mensaje+". ") 
+                                        
+                                        }
+                                        
+                                        
+                                        </SCRIPT>
+                                        <SCRIPT language="JavaScript">
+                                        
+                                        function examinar() 
+                                        { 
+                                        puntuacion=0; 
+                                        nocontesta=0; 
+                                        contestadas=0; 
+                                        puntosmaximos=0; 
+                                        
+                                        if(pregunta1!= "0" )
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta1 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta1 == "B") {puntuacion=puntuacion+10}
+                                          if(pregunta1 == "C") {puntuacion=puntuacion+0}
+                                        
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        if(pregunta2 != "0")
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta2 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta2 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta2 == "C") {puntuacion=puntuacion+10}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1}
+                                        
+                                        if(pregunta3!= "0" )
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta3 == "A") {puntuacion=puntuacion+10}
+                                          if(pregunta3 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta3 == "C") {puntuacion=puntuacion+0}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        if(pregunta4 != "0")
+                                        {
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta4 == "A") {puntuacion=puntuacion+0}
+                                          if(pregunta4 == "B") {puntuacion=puntuacion+10}
+                                          if(pregunta4 == "C") {puntuacion=puntuacion+0}
+                                        }
+                                        else {nocontesta=nocontesta+1}
+                                        
+                                        if(pregunta5!= "0" ){
+                                          contestadas=contestadas+1
+                                          puntosmaximos=puntosmaximos+10
+                                          if(pregunta5 == "A") {puntuacion=puntuacion+10}
+                                          if(pregunta5 == "B") {puntuacion=puntuacion+0}
+                                          if(pregunta5 == "C") {puntuacion=puntuacion+0}
+                                          
+                                        }
+                                        else {nocontesta=nocontesta+1} 
+                                        
+                                        
+                                        if (puntosmaximos!=0) 
+                                        {indiceacierto=Math.round(100*(puntuacion/puntosmaximos))
+                                        } 
+                                        else{indiceacierto=0} 
+                                        
+                                        
+                                        if(indiceacierto<=100&&indiceacierto>=90) 
+                                        {
+                                        mensaje="Excelente Muy Bien Sigue Asi"} 
+                                        
+                                        if(indiceacierto<90&&indiceacierto>=80)
+                                        {
+                                        mensaje="Muy Bien"} 
+                                        
+                                        if(indiceacierto<70&&indiceacierto>=60)
+                                        {
+                                        mensaje="Regular Deverias Estudiar Mas"} 
+                                        
+                                        if(indiceacierto<50&&indiceacierto>=30)
+                                        {
+                                        mensaje="Mal Echale Ganas"} 
+                                        
+                                        if(indiceacierto<20&&indiceacierto>=0)
+                                        {
+                                        mensaje="REPROBADOOO!!!!"} 
+                                        
+                                        if(contestadas==0)
+                                        {
+                                        mensaje=":-|"} 
+                                        
+                                        alert("Tu puntuación es "+puntuacion+"." +  "\n\nEl número máximo de puntos que podía conseguir era de " + puntosmaximos + ".\n\nHa dejado sin contestar "+ nocontesta+".\n\nSu porcentaje de aciertos es de "+indiceacierto+"%.\n\n"+mensaje+". ") 
+                                        
+                                        }
+                                        
+                                        
+                                        </SCRIPT>
+
+
+<center>
+<input class="waves-effect waves-light btn" type="button" name="submit" value="Los Resultado del Cuestionario son:" onclick="examinar()"> 
+<input class="waves-effect waves-light btn" type="button" name="Reset" value="Reinicar Cuestionario" onClick="avisoreset()"><br>
+<input class="waves-effect waves-light btn" type="button" name="solucion" value="Respuestas Correctas" onclick="alert('RESPUESTAS CORRECTAS \n1:B \n2:C \n3:A \n4:B \n5:A')">
+</center>
+</section>
+</body>
+                            <p>Hecho por Clarisa M.A.</p>
+                            <!-- Link to another page -->
+                            <a href="about.html">About app</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>
